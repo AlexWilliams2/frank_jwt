@@ -127,7 +127,7 @@ impl ToKey for String {
     }
 }
 
- impl<'a> ToKey for &'a str {
+impl<'a> ToKey for &'a str {
     fn to_key(&self) -> Result<Vec<u8>, Error> {
         Ok(self.as_bytes().to_vec())
     }
